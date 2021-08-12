@@ -13,7 +13,8 @@
 <body>
 <h1>Caculator</h1>
 <form action="/tinh" method="post">
-    <input type="number" name="var1" id="var1"><input type="number" name="var2" id="var2"><br>
+    <input type="number" name="var1" required>
+    <input type="number" name="var2" required><br>
     <button type="submit" name="maytinh" value="+">addition(+)</button>
     <button type="submit" name="maytinh" value="-">Subtraction(-)</button>
     <button type="submit" name="maytinh" value="*">Multiplication(X)</button>
