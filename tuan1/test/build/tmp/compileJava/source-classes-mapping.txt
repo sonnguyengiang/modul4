@@ -1,8 +1,0 @@
-ApplicationConfig.java
- ApplicationConfig
-ApplicationInitializer.java
- ApplicationInitializer
-controllers/HomeController.java
- controllers.HomeController
-services/CaculatorServices.java
- services.CaculatorServices

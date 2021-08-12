@@ -1,7 +1,9 @@
 package controllers;
 
+import com.sun.xml.internal.ws.api.streaming.XMLStreamReaderFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import services.CaculatorServices;
 
 import javax.servlet.http.HttpServletRequest;
@@ -15,15 +17,28 @@ public class HomeController {
     }
 
     @RequestMapping("/tinh")
-    public String tinhketqua(HttpServletRequest request){
-        int var1 = Integer.parseInt(request.getParameter("var1"));
-        int var2 = Integer.parseInt(request.getParameter("var2"));
+    public String tinhketqua(HttpServletRequest request, @RequestParam int var1, @RequestParam int var2){
         String caculator = request.getParameter("maytinh");
-        System.out.println(caculator);
-        System.out.println(var1);
-        CaculatorServices caculatorServices = new CaculatorServices();
-        int ketqua = caculatorServices.caculator(var1, var2, caculator);
+        String ketqua = "";
+        switch (caculator){
+            case "+":
+                ketqua = String.valueOf(var1 + var2);
+                break;
+            case "-":
+                ketqua = String.valueOf(var1 - var2);
+                break;
+            case "*":
+                ketqua = String.valueOf(var1 * var2);
+                break;
+            case "/":
+                if (var2 == 0){
+                    ketqua = "khong the chia";
+                } else {
+                    ketqua = String.valueOf(var1 / var2);
+                }
+                break;
+        }
         request.setAttribute("caculatorx", ketqua);
-        return "/WEB-INF/ketqua.jsp";
+        return "/WEB-INF/show.jsp";
     }
 }
