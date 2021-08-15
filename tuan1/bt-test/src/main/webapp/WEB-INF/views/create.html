@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>product</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="https://image.flaticon.com/icons/png/128/906/906265.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+</head>
+<body>
+<div></div>
+<!--table-->
+<div class="container" style="margin: auto">
+    <h2>Create Product</h2>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>name</th>
+            <th>quantity</th>
+            <th>color</th>
+            <th>category</th>
+            <th>img</th>
+            <th>action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <form action="/create" method="post">
+            <tr>
+                <td><input type="text" name="name"></td>
+                <td><input type="text" name="quantity"></td>
+                <td><input type="text" name="color"></td>
+                <td><input type="text" name="category"></td>
+                <td><input type="text" name="img"></td>
+                <td><button type="submit" class="btn btn-success">Create</button></td>
+            </tr>
+        </form>
+        </tbody>
+    </table>
+</div>
+<div></div>
+</body>
+</html>

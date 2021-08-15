@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>product</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="https://image.flaticon.com/icons/png/128/906/906265.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+</head>
+<body>
+<div></div>
+<!--table-->
+<div class="container" style="margin: auto">
+    <h2>Product List</h2>
+    <a href="/create" class="btn btn-success">Create</a>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>name</th>
+            <th>quantity</th>
+            <th>color</th>
+            <th>category</th>
+            <th>img</th>
+            <th>action</th>
+        </tr>
+        </thead>
+        <form method="post">
+            <tbody>
+            <tr th:object="${productEdit}">
+                <td><input name="name" th:value="*{getName()}"></td>
+                <td><input name="quantity" th:value="*{getQuantity()}"></td>
+                <td><input name="color" th:value="*{getColor()}"></td>
+                <td><input name="category" th:value="*{getCategory()}"></td>
+                <td><input name="img" th:value="*{getImg()}"></td>
+                <td><button type="submit" class="btn btn-success">edit</button></td>
+            </tr>
+            </tbody>
+        </form>
+    </table>
+</div>
+<div></div>
+</body>
+</html>

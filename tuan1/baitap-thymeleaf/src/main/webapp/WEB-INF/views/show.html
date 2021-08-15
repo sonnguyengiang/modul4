@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+    <title>Title</title>
+    <head>
+        <title>Student List</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+<body>
+<div class="container">
+    <h2>Student Table</h2>
+    <p>Show list student</p>
+    <form action="/customer/find" method="post">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Create</th>
+                <th>Find</th>
+            </tr>
+            </thead>
+            <tbody>
+            <td><a href="/customer/create" class="btn btn-success">Create</a></td>
+            <td><input placeholder="enter name" name="findName">
+                <button type="submit" class="btn btn-primary">find</button>
+            </td>
+            </tbody>
+        </table>
+    </form>
+</div>
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>gmail</th>
+            <th>address</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr th:each="c,loop : ${list}">
+                <td th:text ${c.id}></td>
+                <td th:text ${c.id}></td>
+                <td th:text ${c.id}></td>
+                <td th:text ${c.id}></td>
+                <td>
+                    <a href="" class="btn btn-warning">edit</a>
+                    <a href="" class="btn btn-danger">delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

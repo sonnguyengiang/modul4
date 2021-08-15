@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+    <title>Title</title>
+    <head>
+        <title>Student List</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+<body>
+<div class="container">
+    <h2>Create Table</h2>
+    <p>Show list student</p>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>gmail</th>
+            <th>address</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <form action="/customer/create" method="post">
+            <tbody>
+            <tr>
+                <td><input type="text" placeholder="enter id" name="id"></td>
+                <td><input type="text" placeholder="enter name" name="name"></td>
+                <td><input type="test" placeholder="enter gmail" name="gmail"></td>
+                <td><input type="text" placeholder="enter address" name="address"></td>
+                <td>
+                    <button type="submit" class="btn btn-success">create</button>
+                </td>
+            </tr>
+            </tbody>
+        </form>
+    </table>
+</div>
+</body>
+</html>

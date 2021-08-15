@@ -1,0 +1,10 @@
+configuration/AppConfiguration.java
+ configuration.AppConfiguration
+configuration/AppInitializer.java
+ configuration.AppInitializer
+model/Product.java
+ model.Product
+services/ProductServices.java
+ services.ProductServices
+controller/MainController.java
+ controller.MainController

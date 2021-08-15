@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>product</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="https://image.flaticon.com/icons/png/128/906/906265.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+</head>
+<body>
+<div></div>
+<!--table-->
+<div class="container" style="margin: auto">
+    <h2>Find List</h2>
+    <form action="/find" method="get">
+        <input type="text" name="findName">
+        <button type="submit">find</button>
+        <a href="/show" class="btn btn-success">back</a>
+    </form>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>quantity</th>
+            <th>color</th>
+            <th>category</th>
+            <th>img</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="c, loop : ${productFind}">
+            <td th:text="${loop.index + 1}"></td>
+            <td th:text="${c.name}"></td>
+            <td th:text="${c.quantity}"></td>
+            <td th:text="${c.color}"></td>
+            <td th:text="${c.category}"></td>
+            <td><img alt="" th:src="*{c.getImg()}" width="60px" height="60px"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div></div>
+</body>
+</html>
