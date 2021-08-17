@@ -32,7 +32,7 @@ public class FileController {
     public String create(@ModelAttribute Music music, @RequestParam MultipartFile upFile) {
         String nameMusic = upFile.getOriginalFilename();
         try {
-            FileCopyUtils.copy(upFile.getBytes(), new File("file:D:/codegym/module4/tuan2/bt-upfilenhac/src/main/webapp/file/" + nameMusic));
+            FileCopyUtils.copy(upFile.getBytes(), new File("D:\\codegym\\module4\\tuan2\\bt-upfilenhac\\src\\main\\webapp\\file/" + nameMusic));
             String urlImg = "/i/file/" + nameMusic;
             music.setFileMusic(urlImg);
         } catch (IOException e) {
