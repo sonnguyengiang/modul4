@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/create">create</a>
+<table border="1" style="margin: auto;">
+  <tr>
+    <th>name</th>
+    <th>author</th>
+    <th>type</th>
+    <th>file</th>
+  </tr>
+  <tbody>
+    <tr th:each="c, loop: ${music}">
+      <td th:text="${c.name}"></td>
+      <td th:text="${c.author}"></td>
+      <td th:text="${c.type}"></td>
+      <td><audio th:src="${c.fileMusic}" controls></audio></td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
