@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div th:object="${detailBlog}">
+    <h3>Author</h3><p th:text="*{author}"></p>
+    <h3>date</h3><p th:text="*{date}"></p>
+    <h3>name</h3><p th:text="*{name}"></p>
+    <h3>content</h3><p th:text="*{content}"></p>
+    <a th:href="@{/edit/{id}(id = *{id})}"></a>
+    <a th:href="@{/delete/{id}(id = *{id})}"></a>
+</div>
+</body>
+</html>
