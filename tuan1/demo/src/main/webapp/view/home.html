@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>home</h2>
+<a href="/create">create</a><br>
+<form>
+    <input type="text" name="findName"><button type="submit">find</button>
+</form>
+<h3>list Account</h3>
+<table border="1">
+    <tr>
+        <th>id</th>
+        <th>username</th>
+        <th>password</th>
+        <th>createDay</th>
+        <th>action</th>
+    </tr>
+    <tbody>
+    <tr th:each="account, loop: ${home}">
+        <td th:text="${loop.index + 1}"></td>
+        <td th:text="${account.username}"></td>
+        <td th:text="${account.password}"></td>
+        <td th:text="${account.createdate}"></td>
+        <td>
+            <a th:href="@{/edit/{id}(id = ${account.id})}">edit</a>
+            <a th:href="@{/delete/{id}(id = ${account.id})}">delete</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

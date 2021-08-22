@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Employee</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<h1>Employee Management</h1><br><br>
+<span>
+    <a href="/create" class="btn btn-success">create</a>
+    <a href="/sapxep" class="btn btn-success">sap xep theo tuoi</a>
+</span>
+<form method="post" action="/findName">
+    <input type="text" name="findName"><button type="submit">find</button>
+</form>
+<div class="container" style="position:absolute; left:0px; top:200px">
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>EmployeeCode</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Salary</th>
+            <th>Branch</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="employee: ${home}">
+            <td th:text="${employee.employeeCode}"></td>
+            <td><a th:href="@{/detail/{id}(id = ${employee.id})}" th:text="${employee.name}"></a></td>
+            <td th:text="${employee.age}"></td>
+            <td th:text="${employee.salary}"></td>
+            <td th:text="${employee.branch}"></td>
+            <td>
+                <a th:href="@{/edit/{id}(id = ${employee.id})}" class="btn btn-primary">update</a>
+                <a th:href="@{/delete/{id}(id = ${employee.id})}" class="btn btn-danger" onclick="return confirm('you sure that?')">delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

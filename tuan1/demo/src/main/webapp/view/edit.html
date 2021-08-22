@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">
+  <h4>username</h4><input type="text" name="username" th:value="${edit.username}"><br>
+  <h4>password</h4><input type="text" name="password" th:value="${edit.password}"><br>
+  <h4>create date</h4><input type="date" name="createdate" th:value="${edit.createdate}"><br>
+  <button type="submit">edit</button>
+</form>
+</body>
+</html>

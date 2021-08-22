@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .strong{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<h1>Employee detail</h1>
+<div th:object="${detail}">
+    <span class="strong">EmployeeCode </span><span th:text="*{employeeCode}"></span><br><br>
+    <span class="strong">name </span><span th:text="*{name}"></span><br><br>
+    <span class="strong">age </span><span th:text="*{age}"></span><br><br>
+    <span class="strong">salary </span><span th:text="*{salary}"></span><br><br>
+    <span class="strong">Branch </span><span th:text="*{branch}"></span><br><br>
+</div>
+<a href="/home" class="btn btn-info">back home</a>
+</body>
+</html>
