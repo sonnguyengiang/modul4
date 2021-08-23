@@ -31,12 +31,9 @@
         <button class="btn btn-success">Create</button>
         <a class="button" href="/home">cancel</a>
     </span>
-    <tr>
-        <td style="color: red" th:if="${#fields.hasErrors('employeeCode')}" th:errors="*{employeeCode}"></td>
-        <td style="color: red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></td>
-        <td style="color: red" th:if="${#fields.hasErrors('salary')}" th:errors="*{salary}"></td>
-        <td></td>
-    </tr>
+    <p style="color: red" th:if="${#fields.hasErrors('employeeCode')}" th:errors="*{employeeCode}"></p>
+    <p style="color: red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p>
+    <p style="color: red" th:if="${#fields.hasErrors('salary')}" th:errors="*{salary}"></p>
 </form>
 </body>
 </html>

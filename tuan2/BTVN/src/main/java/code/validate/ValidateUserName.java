@@ -25,7 +25,7 @@ public class ValidateUserName implements Validator {
 
         for (Employee a:list) {
             if (a.getEmployeeCode().equals(employee.getEmployeeCode())){
-                errors.rejectValue("EmployeeCode", "EmployeeCode.duplicate");
+                errors.rejectValue("employeeCode", "employeeCode.duplicate");
                 break;
             }
         }
