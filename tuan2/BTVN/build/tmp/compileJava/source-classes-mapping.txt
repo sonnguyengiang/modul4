@@ -1,16 +1,14 @@
 code/repository/IEmployeeRepo.java
  code.repository.IEmployeeRepo
-code/config/ApplicationInitializer.java
- code.config.ApplicationInitializer
 code/services/IEmployeeServices.java
  code.services.IEmployeeServices
-code/model/Employee.java
- code.model.Employee
-code/services/EmployeeServices.java
- code.services.EmployeeServices
+code/config/ApplicationInitializer.java
+ code.config.ApplicationInitializer
 code/controller/MainController.java
  code.controller.MainController
-code/validate/ValidateUserName.java
- code.validate.ValidateUserName
+code/services/EmployeeServices.java
+ code.services.EmployeeServices
 code/config/ApplicationConfig.java
  code.config.ApplicationConfig
+code/model/Employee.java
+ code.model.Employee

@@ -2,7 +2,7 @@ package code.controller;
 
 import code.model.Employee;
 import code.services.IEmployeeServices;
-import code.validate.ValidateUserName;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.data.domain.PageRequest;
@@ -19,8 +19,6 @@ public class MainController {
     @Autowired
     IEmployeeServices iEmployeeServices;
 
-    @Autowired
-    ValidateUserName validateUserName;
 
 //    @RequestMapping("/home")
 //    public ModelAndView home(@RequestParam(defaultValue = "0") int pageNumber, @RequestParam(defaultValue = "6") int sizePage) {
@@ -44,12 +42,8 @@ public class MainController {
     }
 
     @PostMapping("/create")
-    public ModelAndView create(@Valid @ModelAttribute Employee employee, BindingResult bindingResult) {
-//        ModelAndView modelAndView = new ModelAndView("redirect:/home");
-//        iEmployeeServices.save(employee);
-//        return modelAndView;
+    public ModelAndView create(@Valid @ModelAttribute("code") Employee employee, BindingResult bindingResult) {
 
-        validateUserName.validate(employee,bindingResult);
         if (bindingResult.hasFieldErrors()) {
             ModelAndView modelAndView = new ModelAndView("/create");
             modelAndView.addObject("code",employee);

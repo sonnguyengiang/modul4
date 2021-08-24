@@ -2,7 +2,7 @@ package code.config;
 
 import code.services.EmployeeServices;
 import code.services.IEmployeeServices;
-import code.validate.ValidateUserName;
+
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
@@ -118,10 +118,6 @@ public class ApplicationConfig extends WebMvcConfigurerAdapter implements Applic
         return new EmployeeServices();
     }
 
-    @Bean
-    public ValidateUserName validateUserName() {
-        return new ValidateUserName();
-    }
 
     @Bean
     public MessageSource messageSource() {

@@ -11,11 +11,9 @@ public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @Pattern(regexp = "^[FT]+[0-9]{3}$", message = "Bắt buộc employeeCode dạng FTXXX")
+    @Pattern(regexp = "^[F]+[0-9]{3}$", message = "Bắt buộc employeeCode dạng FTXXX")
     private String EmployeeCode;
-    @Size(min = 1, message = "not null")
     private String name;
-    @Size(min = 1, message = "not null")
     private String salary;
     private int age;
     private String branch;
