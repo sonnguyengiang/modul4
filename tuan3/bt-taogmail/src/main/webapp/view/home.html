@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/create" method="post">
+    <h1>Setting</h1>
+        <p>Languages</p>
+        <select name="languages">
+            <option value="english">english</option>
+            <option value="Vietnamese">Vietnamese</option>
+            <option value="Japanese">Japanese</option>
+            <option value="Chinese">Chinese</option>
+        </select>
+    <span>
+        <p>Page Size</p>
+        <select name="pageSize">
+            <option value="5"><5/option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+        </select>
+    </span>
+    <span><p>Filter</p><input type="checkbox" name="filter"></span>
+    <span><p>signature</p><input type="text" name="signature"></span>
+    <button type="submit">create</button>
+</form>
+</body>
+</html>
