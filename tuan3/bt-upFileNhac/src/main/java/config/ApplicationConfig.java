@@ -16,7 +16,6 @@ import org.thymeleaf.spring5.SpringTemplateEngine;
 import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 import org.thymeleaf.templatemode.TemplateMode;
-
 @Configuration
 @EnableWebMvc
 @ComponentScan("controller")
@@ -57,7 +56,7 @@ public class ApplicationConfig extends WebMvcConfigurerAdapter implements Applic
     @Override
     // chỉ cho Spring biết chỗ lấy tài liệu tĩnh.(js,css,img)
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/i/**").addResourceLocations("D:\\codegym\\module4\\tuan3\\bt-upFileNhac\\src\\main\\webapp\\file\\");
+        registry.addResourceHandler("/file/**").addResourceLocations("D:/codegym/module4/tuan3/bt-upFileNhac/src/main/webapp/");
     }
 
     @Bean

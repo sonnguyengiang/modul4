@@ -1,10 +1,10 @@
-config/ApplicationInitializer.java
- config.ApplicationInitializer
 model/Music.java
  model.Music
 config/ApplicationConfig.java
  config.ApplicationConfig
-services/MusicServices.java
- services.MusicServices
+config/ApplicationInitializer.java
+ config.ApplicationInitializer
 controller/MusicController.java
  controller.MusicController
+services/MusicServices.java
+ services.MusicServices

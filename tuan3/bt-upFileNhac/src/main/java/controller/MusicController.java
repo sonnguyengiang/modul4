@@ -33,9 +33,11 @@ public class MusicController {
     public String save(@ModelAttribute Music music, @RequestParam MultipartFile upFile){
         String nameMusic = upFile.getOriginalFilename();
         try {
-            FileCopyUtils.copy(upFile.getBytes(), new File("D:\\codegym\\module4\\tuan3\\bt-upFileNhac\\src\\main\\webapp\\file/" + nameMusic));
-            String urlImg = "/i/file/" + nameMusic;
+            FileCopyUtils.copy(upFile.getBytes(),
+                    new File("D:/codegym/module4/tuan3/bt-upFileNhac/src/main/webapp/file/" + nameMusic));
+            String urlImg = "/file/" + nameMusic;
             music.setFileMusic(urlImg);
+            System.out.println(urlImg);
         } catch (IOException e) {
             System.err.println("chưa uppload file");
         }

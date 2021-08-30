@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+   <tr>
+       <th>#</th>
+       <th>name</th>
+       <th>gmail</th>
+       <th>address</th>
+   </tr>
+    <tbody>
+    <tr th:each="c, loop: ${home}">
+        <td th:text="${loop.count}" ></td>
+        <td th:text="${c.name}" ></td>
+        <td th:text="${c.gmail}" ></td>
+        <td th:text="${c.address}" ></td>
+    </tr>
+    </tbody>
+</table>
+<a href="/create">create</a>
+</body>
+</html>

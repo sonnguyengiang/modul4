@@ -18,7 +18,7 @@
     <tr th:each="c, loop: ${music}">
         <td th:text="${c.name}"></td>
         <td th:text="${c.author}"></td>
-        <td><audio th:src="${c.fileMusic}" controls></audio></td>
+        <td><audio th:src="${c.fileMusic}" controls type="audio/mpeg"></audio></td>
         <td th:text="${c.date}"></td>
     </tr>
     </tbody>

@@ -8,7 +8,7 @@ public class MusicServices {
     public ArrayList<Music> list = new ArrayList<>();
 
     public MusicServices(){
-        list.add(new Music("nya", "other", "/i/file/music.mp3", "2002-12-12"));
+        list.add(new Music("nya", "other", "/file/music.mp3", "2002-12-12"));
     }
 
     public void save(Music music){

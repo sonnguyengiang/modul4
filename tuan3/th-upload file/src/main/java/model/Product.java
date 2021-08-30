@@ -2,10 +2,10 @@ package model;
 
 public class Product {
     private String name;
-    private boolean price;
+    private float price;
     private String img;
 
-    public Product(String name, boolean price, String img) {
+    public Product(String name, float price, String img) {
         this.name = name;
         this.price = price;
         this.img = img;
@@ -19,11 +19,11 @@ public class Product {
         this.name = name;
     }
 
-    public boolean isPrice() {
+    public float isPrice() {
         return price;
     }
 
-    public void setPrice(boolean price) {
+    public void setPrice(float price) {
         this.price = price;
     }
 
