@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/create" method="post">
+    <table th:object="${districtList}">
+        <tr>
+            <td>
+                District
+                <input type="text" th:field="*{name}">
+            </td>
+            <td>
+                <select th:field="*{conscious}">
+                    <option th:each="conscious :${consciousList}" th:value="${conscious.id_T}" th:text="${conscious.name}"></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><button type="submit">create</button></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

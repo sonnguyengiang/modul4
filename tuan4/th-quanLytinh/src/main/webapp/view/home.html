@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/create">create</a>
+<table border="1">
+    <tr>
+        <th>#</th>
+        <th>District</th>
+        <th>Conscious</th>
+        <th>action</th>
+    </tr>
+    <tbody>
+    <tr th:each="c, loop : ${home}">
+        <td th:text="${loop.count}"></td>
+        <td th:text="${c.name}"></td>
+        <td th:text="${c.conscious.name}"></td>
+        <td>
+            <a th:href="@{/edit/{id}(id = ${c.id_D})}">edit</a>
+            <a th:href="@{/delete/{id}(id = ${c.id_D})}">delete</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
