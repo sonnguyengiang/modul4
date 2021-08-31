@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<a href="/create">create</a>
+<body>
+<table border="1">
+    <tr>
+        <th>#</th>
+        <th>name</th>
+        <th>date</th>
+        <th>gmail</th>
+        <th>address</th>
+        <th>phone number</th>
+        <th>action</th>
+    </tr>
+    <tbody>
+    <tr th:each="c, loop : ${home}">
+        <td th:text="${loop.count}"></td>
+        <td th:text="${c.name}"></td>
+        <td th:text="${c.date}"></td>
+        <td th:text="${c.gmail}"></td>
+        <td th:text="${c.address}"></td>
+        <td th:text="${c.phoneNumber}"></td>
+        <td><a th:href="@{/delete/{index}(index = ${loop.index})}">delete</a></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
