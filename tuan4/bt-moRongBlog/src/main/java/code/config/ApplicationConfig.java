@@ -1,9 +1,5 @@
-package conde.config;
+package code.config;
 
-import code.services.ClassRoomServices;
-import code.services.IClassRoomServices;
-import code.services.IStudentServices;
-import code.services.StudentServices;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
@@ -127,13 +123,4 @@ public class ApplicationConfig extends WebMvcConfigurerAdapter implements Applic
         return messageSource;
     }
 
-    @Bean
-    public IClassRoomServices iClassRoomServices(){
-        return new ClassRoomServices();
-    }
-
-    @Bean
-    public IStudentServices iStudentServices(){
-        return new StudentServices();
-    }
 }
