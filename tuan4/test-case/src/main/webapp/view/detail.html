@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>detail</h1>
+<div th:object="${detail}">
+    <p th:text="*{name}"></p>
+    <p th:text="*{address}"></p>
+    <a th:href="@{/appFriend/{id}(id = *{id_user})}">app</a>
+</div>
+<div hidden th:object="${user}">
+    <p th:text="*{id_user}"></p>
+    <p th:text="*{name}"></p>
+    <p th:text="*{address}"></p>
+</div>
+</body>
+</html>
