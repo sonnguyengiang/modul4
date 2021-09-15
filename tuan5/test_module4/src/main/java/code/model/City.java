@@ -3,22 +3,24 @@ package code.model;
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 
 @Entity
 public class City {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @NotEmpty(message = "ko de trong")
+    @NotEmpty(message = "not null")
     private String nameCity;
     @ManyToOne
     private Country country;
-    @NotEmpty
+
     private int area;
-    @NotEmpty
+
     private int danSo;
-    @NotEmpty
+
     private int GDP;
+
     private String moTa;
 
     public City(){}

@@ -44,7 +44,8 @@ public class CityController {
     @PostMapping("/create")
     public ModelAndView create(@Valid @ModelAttribute("create") City city, BindingResult bindingResult){
         if (bindingResult.hasErrors()){
-            return new ModelAndView("/create");
+            ModelAndView modelAndView = new ModelAndView("/create");
+            return modelAndView;
         }
         ModelAndView modelAndView = new ModelAndView("redirect:/home");
         iCityService.save(city);

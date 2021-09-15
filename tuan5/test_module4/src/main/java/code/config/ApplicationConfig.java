@@ -121,13 +121,6 @@ public class ApplicationConfig extends WebMvcConfigurerAdapter implements Applic
 
 
     @Bean
-    public MessageSource messageSource() {
-        ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
-        messageSource.setBasenames("validation-message");
-        return messageSource;
-    }
-
-    @Bean
     public ICityService iCityService(){
         return new CityService();
     }
