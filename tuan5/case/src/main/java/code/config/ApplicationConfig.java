@@ -124,6 +124,4 @@ public class ApplicationConfig implements WebMvcConfigurer, ApplicationContextAw
         properties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
         return properties;
     }
-
-    
 }
