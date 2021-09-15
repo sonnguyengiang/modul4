@@ -4,6 +4,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Positive;
 
 @Entity
 public class City {
@@ -14,13 +15,15 @@ public class City {
     private String nameCity;
     @ManyToOne
     private Country country;
-
+    @NotNull
+    @Positive(message = "ko the la so am")
     private int area;
-
+    @NotNull
+    @Positive(message = "ko the la so am")
     private int danSo;
-
+    @NotNull
+    @Positive(message = "ko the la so am")
     private int GDP;
-
     private String moTa;
 
     public City(){}
